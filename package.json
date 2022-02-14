@@ -28,5 +28,10 @@
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
   }
 }

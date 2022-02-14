@@ -6,4 +6,4 @@ const probot = new Probot({
   secret: process.env.SECRET
 });
 
-module.exports = createNodeMiddleware(app, { probot, webhooksPath: '/api/github/we:w!bhooks'});
+module.exports = createNodeMiddleware(app, { probot, webhooksPath: '/api/github/webhooks'});

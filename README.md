@@ -1,3 +1,14 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Probot: protector-app-bot](#probot-protector-app-bot)
+  - [Install](#install)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Probot: protector-app-bot
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that enables protection on main branch of a newly created repository within an organization.

@@ -1,10 +1,9 @@
 const { createNodeMiddleware, Probot } = require("probot");
-const app = require("./index.js");
-
+const app = require("../../../index.js");
 const probot = new Probot({
-  appId: 123,
-  privateKey: "content of your *.pem file here",
-  secret: "webhooksecret123",
+  appId: 172112,
+  privateKey: process.env.PK,
+  secret: process.env.SECRET
 });
 
-module.exports = createNodeMiddleware(app, { probot });
+module.exports = createNodeMiddleware(app, { probot, webhooksPath: '/api/github/we:w!bhooks'});

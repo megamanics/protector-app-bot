@@ -2,6 +2,10 @@
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app
 
+## Install
+
+[INSTALL](https://github.com/apps/protector-app-bot/installations/new)
+
 ## Setup
 
 ```sh

@@ -1,0 +1,76 @@
+{
+  "action": "created",
+  "installation": {
+    "id": 23241336,
+    "account": {
+      "login": "Sankhe-LLC",
+      "id": 64214760,
+      "node_id": "MDEyOk9yZ2FuaXphdGlvbjY0MjE0NzYw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64214760?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Sankhe-LLC",
+      "html_url": "https://github.com/Sankhe-LLC",
+      "followers_url": "https://api.github.com/users/Sankhe-LLC/followers",
+      "following_url": "https://api.github.com/users/Sankhe-LLC/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Sankhe-LLC/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Sankhe-LLC/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Sankhe-LLC/subscriptions",
+      "organizations_url": "https://api.github.com/users/Sankhe-LLC/orgs",
+      "repos_url": "https://api.github.com/users/Sankhe-LLC/repos",
+      "events_url": "https://api.github.com/users/Sankhe-LLC/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Sankhe-LLC/received_events",
+      "type": "Organization",
+      "site_admin": false
+    },
+    "repository_selection": "all",
+    "access_tokens_url": "https://api.github.com/app/installations/23241336/access_tokens",
+    "repositories_url": "https://api.github.com/installation/repositories",
+    "html_url": "https://github.com/organizations/Sankhe-LLC/settings/installations/23241336",
+    "app_id": 172112,
+    "app_slug": "protector-app-bot",
+    "target_id": 64214760,
+    "target_type": "Organization",
+    "permissions": {
+      "issues": "write",
+      "metadata": "read",
+      "repository_hooks": "read",
+      "organization_hooks": "read"
+    },
+    "events": [
+      "issues",
+      "repository"
+    ],
+    "created_at": "2022-02-13T17:15:27.000-07:00",
+    "updated_at": "2022-02-13T17:15:27.000-07:00",
+    "single_file_name": null,
+    "has_multiple_single_files": false,
+    "single_file_paths": [
+
+    ],
+    "suspended_by": null,
+    "suspended_at": null
+  },
+  "repositories": [
+  ],
+  "requester": null,
+  "sender": {
+    "login": "vinayski",
+    "id": 29655435,
+    "node_id": "MDQ6VXNlcjI5NjU1NDM1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/29655435?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/vinayski",
+    "html_url": "https://github.com/vinayski",
+    "followers_url": "https://api.github.com/users/vinayski/followers",
+    "following_url": "https://api.github.com/users/vinayski/following{/other_user}",
+    "gists_url": "https://api.github.com/users/vinayski/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/vinayski/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/vinayski/subscriptions",
+    "organizations_url": "https://api.github.com/users/vinayski/orgs",
+    "repos_url": "https://api.github.com/users/vinayski/repos",
+    "events_url": "https://api.github.com/users/vinayski/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/vinayski/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+}

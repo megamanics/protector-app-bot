@@ -4,27 +4,8 @@
 
 ## Install
 
-[INSTALL](https://github.com/apps/protector-app-bot/installations/new)
+[![button](https://dabuttonfactory.com/button.png?t=Install+Protector-app-bot&f=Roboto-Bold&ts=26&tc=fff&tshs=1&tshc=000&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798)](https://github.com/apps/protector-app-bot/installations/new)
 
-## Setup
-
-```sh
-# Install dependencies
-npm install
-
-# Run the bot
-npm start
-```
-
-## Docker
-
-```sh
-# 1. Build container
-docker build -t protector-app-bot .
-
-# 2. Start container
-docker run -e APP_ID=<app-id> -e PRIVATE_KEY=<pem-value> protector-app-bot
-```
 
 ## Contributing
 
@@ -34,4 +15,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
-[ISC](LICENSE) © 2022 vinayski <ski@sankhe.com>
+[ISC](LICENSE) © 2022 vinayski

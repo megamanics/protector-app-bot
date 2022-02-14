@@ -7,8 +7,13 @@ module.exports = (app) => {
   app.on("repository.created",async (context) => {
         app.log(context);
         app.log(context.repo.name);
-        const params = null;
-        await context.github.issues.create("test");
+        const repo = context.repo();
+        const issueParams = {
+              title: "My First Issue",
+              body: "Testing Issue Creation"
+        }
+        const params = Object.assign({}, repo,  issueParams)
+        await context.github.issues.create(params);
       }
   );
 };

@@ -9,6 +9,7 @@ jobs:
   deploy:
     name: deploy-gcf
     runs-on: ubuntu-latest
+    environment: GCP
     steps:
       - uses: actions/checkout@v2
       - name: Set up Cloud SDK

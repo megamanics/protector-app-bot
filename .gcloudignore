@@ -11,7 +11,8 @@
 # from your .gitignore file, remove the corresponding line
 # below:
 .git
+.github
 .gitignore
-
-# Node.js dependencies:
 node_modules/
+api/
+public/

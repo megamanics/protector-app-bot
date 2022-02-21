@@ -23,12 +23,14 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v0'
       - name: 'Test gcloud cli'
         run: 'gcloud info'
+      - run: |
+          envsubst < app.gcr.yml > app.gcp.yml
       - id: 'deploy'
         name: 'Deploy 2 GCP App Engine'
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
           project_id: "appbots"
-          deliverables: 'app.gcr.yml'
+          deliverables: 'app.gcp.yml'
           promote: true
           version: 'v1'
       - id: 'app-url'

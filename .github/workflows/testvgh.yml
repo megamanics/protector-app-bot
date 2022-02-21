@@ -1,16 +1,16 @@
 name: Test
 on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
+  workflow_run:
+    workflows: [gcpdeploy]
+    types: [completed]
+    
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Recreate test repo
-        run: |
-          gh repo delete  Sankhe-LLC/testrepo101 --confirm
-          gh repo create  Sankhe-LLC/testrepo101 --public -l "MIT"
-        env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+  on-success:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Recreate test repo
+          run: |
+            gh repo delete  Sankhe-LLC/testrepo101 --confirm
+            gh repo create  Sankhe-LLC/testrepo101 --public -l "MIT"
+          env:
+            GITHUB_TOKEN: ${{ secrets.TOKEN }}

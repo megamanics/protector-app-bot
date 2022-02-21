@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: GCP
     steps:
+      - uses: actions/checkout@v2
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
         with:
@@ -19,7 +20,6 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v0'
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
-      - uses: actions/checkout@v2
       - name: Deploy to GCF
         run: |
           gcloud functions deploy protector-app-bot \

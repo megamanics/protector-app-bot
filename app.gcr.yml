@@ -1,8 +1,8 @@
 runtime: nodejs16
 env_variables:
-  VAR1: "5VZGBQNERNRCO2THPTKA"
-  VAR2: "B0epx4RjlT2dLJuZwnYVsoW5mw6ReFhd6xDFDMFj"
-  VAR3: "730866568"
+  APP_ID: $APP_ID
+  WEBHOOK_SECRET: $WEBHOOK_SECRET
+  PRIVATE_KEY: $PRIVATE_KEY
 instance_class: B1
 basic_scaling:
   max_instances: 1

@@ -1,7 +1,7 @@
 name: Test
 on:
   workflow_run:
-    workflows: [gcpdeploy]
+    workflows: [GCP Deploy]
     types: [completed]
     
 jobs:

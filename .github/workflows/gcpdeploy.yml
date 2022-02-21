@@ -23,8 +23,13 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v0'
       - name: 'Test gcloud cli'
         run: 'gcloud info'
-      - run: |
-          envsubst < app.gcr.yml > app.gcp.yml
+      - shell: bash
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          WEBHOOK_SECRET : ${{ secrets.WEBHOOK_SECRET }}
+          PRIVATE_KEY : ${{ secrets.PRIVATE_KEY }}
+        run: |
+            envsubst < app.gcr.yml > app.gcp.yml
       - id: 'deploy'
         name: 'Deploy 2 GCP App Engine'
         uses: 'google-github-actions/deploy-appengine@v0'

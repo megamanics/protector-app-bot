@@ -24,7 +24,7 @@ jobs:
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
           project_id: "appbots"
-          deliverables: 'app.gcr.yaml'
+          deliverables: 'app.gcr.yml'
           promote: true
           version: 'v1'
       - id: 'app-url'

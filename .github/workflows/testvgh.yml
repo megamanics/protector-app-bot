@@ -3,6 +3,7 @@ on:
   workflow_run:
     workflows: [GCP Deploy]
     types: [completed]
+  workflow_dispatch: {}
     
 jobs:
   on-success:

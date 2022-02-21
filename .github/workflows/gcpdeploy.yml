@@ -27,7 +27,7 @@ jobs:
           deliverables: 'app.gcr.yaml'
           promote: true
           version: 'v1'
-      - id: 'app url'
+      - id: 'app-url'
         run: 'curl "${{ steps.deploy.outputs.url }}"'
       #- name: Deploy to GCF
       #  run: |

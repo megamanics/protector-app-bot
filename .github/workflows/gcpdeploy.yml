@@ -26,5 +26,5 @@ jobs:
             --runtime nodejs16 \
             --allow-unauthenticated \
             --trigger-http \
-            --entry-point probotApp \
+            --entry-point app \
             --set-env-vars APP_ID="${{secrets.APP_ID}}",PRIVATE_KEY="${{secrets.PRIVATE_KEY}}",WEBHOOK_SECRET="${{secrets.WEBHOOK_SECRET}}"

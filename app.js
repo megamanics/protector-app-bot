@@ -7,12 +7,7 @@ module.exports = (app) => {
     app.on("repository.created", async (context) => {
             const repo = context.payload.repository.name;
             const owner = context.payload.repository.owner.login;
-            const issueParams = {
-                owner: owner,
-                repo: repo,
-                title: "Protection on Main Branch enabled",
-                body: "@vinayski "
-            };
+
             const protectionParams = {
                 owner: owner,
                 repo: repo,
@@ -28,8 +23,12 @@ module.exports = (app) => {
                 required_status_checks: null,
                 restrictions: null,
             };
-            app.log(protectionParams);
-            app.log(issueParams);
+            const issueParams = {
+                owner: owner,
+                repo: repo,
+                title: "Protection on Main Branch enabled",
+                body: "@vinayski \n```json\n" + JSON.stringify(protectionParams.required_pull_request_reviews,null,'\t') + "\n```"
+            }; 
             await context.octokit.repos.updateBranchProtection(protectionParams);
             await context.octokit.issues.create(issueParams);
         }

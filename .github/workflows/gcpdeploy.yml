@@ -23,7 +23,7 @@ jobs:
       - name: Deploy to GCF
         run: |
           gcloud functions deploy protector-app-bot \
-            --runtime nodejs12 \
+            --runtime nodejs16 \
             --allow-unauthenticated \
             --trigger-http \
             --entry-point probotApp \

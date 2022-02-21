@@ -10,17 +10,20 @@ jobs:
     name: deploy-gcf
     runs-on: ubuntu-latest
     environment: GCP
+    url: ${{ steps.deploy.outputs.url }}
     steps:
       - uses: actions/checkout@v2
       - id: 'auth'
+        name: 'Authenticate 2 GCP'
         uses: 'google-github-actions/auth@v0'
         with:
           credentials_json: '${{ secrets.SERVICE_ACCOUNT_KEY }}'
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v0'
-      - name: 'Use gcloud CLI'
+      - name: 'Test gcloud cli'
         run: 'gcloud info'
       - id: 'deploy'
+        name: 'Deploy 2 GCP App Engine'
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
           project_id: "appbots"
@@ -28,6 +31,7 @@ jobs:
           promote: true
           version: 'v1'
       - id: 'app-url'
+        name: 'deploy 2 url'
         run: 'curl "${{ steps.deploy.outputs.url }}"'
       #- name: Deploy to GCF
       #  run: |

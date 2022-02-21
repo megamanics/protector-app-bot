@@ -33,5 +33,6 @@
     "branches": [
       "main"
     ]
-  }
+  },
+  "main": "app.js",
 }

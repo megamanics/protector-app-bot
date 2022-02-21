@@ -11,14 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     environment: GCP
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v0
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v0'
         with:
-          # probot/example-google-cloud-function credentials provided by @bcoe
-          project_id: ${{ secrets.PROJECT_ID }}
-          service_account_key: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-          export_default_credentials: true
+          credentials_json: '${{ secrets.SERVICE_ACCOUNT_KEY }}'
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v0'
+      - name: 'Use gcloud CLI'
+        run: 'gcloud info'
+      - uses: actions/checkout@v2
       - name: Deploy to GCF
         run: |
           gcloud functions deploy protector-app-bot \

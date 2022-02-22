@@ -26,7 +26,7 @@ module.exports = (app) => {
             const issueParams = {
                 owner: owner,
                 repo: repo,
-                title: "Protection on Main Branch enabled :octocat:",
+                title: "Protection on Main Branch enabled ",
                 body: "@vinayski \n**Details of protected branch**\n```json\n" + JSON.stringify(protectionParams.required_pull_request_reviews,null,'\t') + "\n```"
             }; 
             await context.octokit.repos.updateBranchProtection(protectionParams);

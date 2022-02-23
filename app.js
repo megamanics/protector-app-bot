@@ -27,7 +27,7 @@ module.exports = (app) => {
                 owner: owner,
                 repo: repo,
                 title: "Protection on Main Branch enabled ",
-                body: "@vinayski \n**[Details of protected branch](https://github.com/"+owner+"/"+repo+"/settings/branches)**\n```json\n" + JSON.stringify(protectionParams.required_pull_request_reviews,null,'\t') + "\n```"
+                body: "@vinayski \n**[:octocat:  Details of protected branch :octocat: ](https://github.com/"+owner+"/"+repo+"/settings/branches)**\n```json\n" + JSON.stringify(protectionParams.required_pull_request_reviews,null,'\t') + "\n```"
             }; 
             await context.octokit.repos.updateBranchProtection(protectionParams);
             await context.octokit.issues.create(issueParams);

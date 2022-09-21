@@ -1,0 +1,27 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    vendor: true
+    versioning-strategy: auto
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "🆙 dependabot action - npm"
+    assignees:
+      - "megamanics"
+    allow:
+      - dependency-type: "all"
+    labels:
+      - "npm"
+      - "dependencies"
+      - "dependabot"
+    pull-request-branch-name:
+      separator: "-"
+    rebase-strategy: "auto"

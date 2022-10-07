@@ -1,0 +1,17 @@
+name: Auto-Merge-Mine
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enable-automerge:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'megamanics' }}
+    steps:
+      - name: Enable auto-merge for my PRs only
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

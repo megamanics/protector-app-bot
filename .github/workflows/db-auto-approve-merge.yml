@@ -7,7 +7,7 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.actor == 'dependabot' }}
     steps:
       - name: Dependabot metadata
         id: metadata
@@ -19,6 +19,7 @@ jobs:
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GITHUB_TOKEN: ${{secrets.PR_KEY}}
+          GH_TOKEN: ${{secrets.PR_KEY}}
       - name: Auto Merge a dependabot PR
         run: gh pr merge --auto --rebase "$PR_URL"
         env:
